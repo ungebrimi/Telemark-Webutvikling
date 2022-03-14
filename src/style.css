@@ -1,0 +1,521 @@
+/* root */
+
+:root 
+{
+    --ff-sans: "Urbanist", sans-serif;
+  
+    /* small screen font-sizes */
+    --fs-200: 0.5rem;
+    --fs-300: 0.9rem;
+    --fs-400: 1.1rem;
+    --fs-500: 1.3rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.8rem;
+    --fs-800: 2.1rem;
+    --fs-900: 2.5rem;
+
+  
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+
+
+    --clr-100: #ffffef;
+    --clr-300: #e4e4e4;
+    --clr-500: #949494;
+    --clr-900: #080d0e;
+
+    --clr-accent: #00bbf9;
+
+    --br: 1rem;
+    --flow-space: 3rem;
+}
+@media (min-width: 30em) 
+{
+    :root 
+    {
+      --fs-200: 0.8rem;
+      --fs-300: 1rem;
+      --fs-400: 1.125rem;
+      --fs-500: 1.5rem;
+      --fs-600: 1.7rem;
+      --fs-700: 2.1rem;
+      --fs-800: 2.6rem;
+      --fs-900: 3.5rem;
+    }
+}
+
+
+/* reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/*
+  credits to Josh Comeau for this mordern reset.
+*/
+
+/* utility */
+
+.flow-content > * + * 
+{
+    margin-top: 1rem;
+  }
+  
+  .flow-content--large 
+  {
+    --flow-space: 3rem;
+  }
+  
+  .container 
+  {
+    min-height: 20rem;
+    padding: 2rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .split 
+  {
+    display: flex;
+    width: 100%;
+  }
+
+  .three
+  {
+    position: absolute;
+    display: block;
+    z-index: 100;
+    width: 100%;
+  }
+
+  .bg-light 
+  {
+      background-color: var(--clr-100);
+  }
+
+  .bg-darker 
+  {
+      background-color: var(--clr-300);
+      color: var(--clr-500);
+  }
+
+  .bg-dark 
+  {
+      background-color: var(--clr-900);
+      color: var(--clr-100);
+  }
+
+  .bg-accent 
+  {
+    background-color: var(--clr-accent);
+    color: var(--clr-100);
+  }
+
+  .blue 
+  {
+    color: var(--clr-accent);
+  }
+
+  .center 
+  {
+      display: grid;
+      place-items: center;
+  }
+
+  .padded
+  {
+    padding: 1rem;
+  }
+  
+  .visible
+  {
+    display: block;
+  }
+  
+  .hidden
+  {
+    display: none;
+  }
+  
+  
+  .standard-size
+  {
+    min-height: 40rem;
+  }
+    
+  /* global */
+
+html,
+body
+{
+    line-height: 1.4;
+    font-family: var(--ff-sans);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: #ffffef;
+    max-width: 120rem;
+    width: 100%;
+    height: 200vh;
+  }
+  
+  .webgl
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+  }
+
+  section
+  {
+    padding: 1rem;
+  }
+
+  strong
+  {
+    color: var(--clr-accent);
+  }
+
+  @media (min-width: 60rem ) 
+  {
+    section
+    {
+      padding: 1rem 3rem 1rem 3rem;
+    }
+  }
+/*
+* CONTENT
+*/
+
+#preloader
+{
+  background-color: var(--clr-accent);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  opacity: 1;
+}
+
+svg
+{
+  width: 4rem;
+  height: 4rem;
+}
+
+/* NAV */
+
+
+/* introduction */
+
+.introduction
+{
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: center;
+}
+
+.introduction__title
+{
+    font-size: var(--fs-600);
+}
+
+.introduction__subtitle
+{
+    font-size: var(--fs-500);
+    font-weight: var(--fw-500);
+}
+
+.introduction__logo
+{ 
+    width: 10rem;
+    height: 10rem;
+}
+
+@media (min-width: 40em) {
+  .introduction
+  {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .introduction__logo
+  { 
+      width: 20rem;
+      height: 20rem;
+  }
+}
+
+/* salespitch */
+
+.salespitch
+{
+  background-color: var(--clr-300);
+  height: 5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--fw-700);
+  color: var(--clr-500);
+  position: relative;
+  z-index: 60;
+}
+
+/* about */
+
+.about 
+{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #080d0e;
+}
+
+.about__info
+{
+  max-width: 50ch;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about__info-title
+{
+  color: var(--clr-accent);
+  font-size: var(--fs-500);
+}
+
+.cta-btn 
+{
+  background-color: var(--clr-accent);
+  color: var(--clr-100);
+  padding: 0.5rem;
+  width: 4.4rem;
+  border-radius: 10px;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-600);
+  text-decoration: none;
+  align-self: center;
+}
+
+@media (min-width: 60rem) {
+  .about
+  {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start;
+  }
+
+  .about__info
+  {
+    padding-left: 3rem;
+  }
+
+  .cta-btn
+  {
+    align-self: flex-start;
+  }
+}
+
+iframe {
+  padding: 2rem 0 2rem 0;
+  max-width: 35rem;
+  height: 25rem;
+}
+
+/* products */
+
+.products
+{
+  flex-direction: column;
+  justify-content: center;
+  gap: 8rem;
+  position: relative;
+}
+
+.products__pages-list
+{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#next
+{
+  position: absolute;
+  top: 50%;
+  right: 0%;
+}
+
+#prev
+{
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}
+
+.products__pages-btn
+{
+  background-color: transparent;
+  color: var(--clr-100);
+  font-size: var(--fs-800);
+  border: none;
+}
+
+.products__pages-title
+{
+  text-align: center;
+  font-size: var(--fs-500);
+  margin-bottom: 1rem;
+}
+
+.products__list-title
+{
+  font-size: var(--fs-500);
+}
+
+.products__list
+{
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-600);
+}
+
+.products__list-item
+{
+  margin-top: 1.5rem;
+}
+
+.product__pages-item
+{
+  position: relative;
+  max-width: 35rem;
+}
+
+.products__pages-img
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.dots 
+{
+  gap: 1rem;
+  justify-content: center;
+}
+
+.dot
+{
+  border-radius: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+@media (min-width: 60rem) 
+{
+  .products
+  {
+    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+  }  
+  
+  .products__list
+  {
+    list-style: none;
+    text-align: start;
+  }
+}
+
+/* contact */
+
+.contact__links
+{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact__links-link
+{
+  font-size: var(--fs-300);
+  font-weight: var(--fw-500);
+  color: var(--clr-500);
+  text-decoration: none;
+}
+
+.contact__links-link:hover
+{
+  color: var(--clr-100);
+}
+
+@media (min-width: 60rem) {
+  .contact__links
+  {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+}

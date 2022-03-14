@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    <title>Telemark webutvikling</title>
+</head>
+<body class="body">
+    <div id="preloader">
+        <svg id="loadericon" version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+            <circle fill="none" stroke="#fff" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48"/>
+            <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="85" y2="50.5">
+              <animateTransform 
+                   attributeName="transform" 
+                   dur="2s"
+                   type="rotate"
+                   from="0 50 50"
+                   to="360 50 50"
+                   repeatCount="indefinite" />
+            </line>
+            <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="49.5" y2="74">
+              <animateTransform 
+                   attributeName="transform" 
+                   dur="15s"
+                   type="rotate"
+                   from="0 50 50"
+                   to="360 50 50"
+                   repeatCount="indefinite" />
+            </line>
+        </svg>
+    </div>
+    <canvas class="webgl"></canvas>
+    <main class="three">
+        <section class="introduction standard-size padded split">
+            <div class="introduction__titles flow-content">
+                <h1 class="introduction__title fs-500">Telemark webutvikling</h1>
+                <h2 class="introduction__subtitle">Vi brenner for distriktet!</h2>
+            </div>
+        </section>
+        <div class="salespitch padded split">
+            <p>"En nettside promoterer deg 24/7, ingen ansatt gjør det samme"</p>
+        </div>
+        <section class="about bg-light standard-size padded split">
+            <div class="about__info split">
+                <div class="flow-content">'
+                    <h2 class="about__info-title">Hvem er vi?</h2>
+                    <p>
+                        Vårt ønske er og få frem det distriktet har og by på. <br>
+                        I Norge er vi så heldige som har så mange <strong>fantastiske</strong> steder spredd rundt i landet.
+                        Dette er noe vi jobber hardt for og få frem!<br>
+                        Vi tror att ved bruk av <strong>kreative</strong> nettsider,
+                        som leseren kan oppleve litt mer <strong>interaktivitet</strong> med siden,
+                        Skal vi nå målet vårt!
+                        <br>
+                        Her elsker vi nettsider med 3 dimensjoner!
+                        <br>
+                        <br>
+                        Det er nå ledig for nye oppdrag, gjerne send oss en epost eller ring via nummeret nederst på siden!
+                    </p>
+                </div>
+                <a href="mailto: devjoakimpedersen@gmail.com" class="cta-btn">Kontakt</a>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2045.1323695720887!2d8.50151131617146!3d59.16364103133834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46389fc423214c5d%3A0x81cd99431ce356e4!2sFramnes%2033%2C%203854%20Nissedal!5e0!3m2!1sno!2sno!4v1631653936841!5m2!1sno!2sno" width="100%" height= "100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+        <section class="products standard-size flow-content split">
+            <div class="product__pages flow-content">
+                <ul class="products__pages-list">                    
+                    <li class="product__pages-item">
+                        <h3 class="products__pages-title fs-500">Langs Nisser</h3>
+                        <a href="https://nissedal.netlify.app/" class="products__pages-links">
+                            <img class="projects__pages-img" src="/static/images/nissedal.png" alt="Tourist site for nissedal telemark">
+                        </a>
+                    </li>
+                    <li class="product__pages-item hidden">
+                        <h3 class="products__pages-title fs-500">Enoksen bygg</h3>
+                        <a href="https://enoksen-bygg.no/" class="products__pages-links">
+                            <img class="projects__pages-img" src="/static/images/enoksen.png" alt="link to enoksen bygg">
+                        </a>
+                    </li>
+                    <li class="product__pages-item hidden">
+                        <h3 class="products__pages-title fs-500">Bris værvarsel</h3>
+                        <a href="https://littvind.com" class="products__pages-links">
+                            <img class="projects__pages-img"src="/static/images/weather.png" alt="link to littvind weather app">
+                        </a>
+                    </li>
+                    <button class="products__pages-btn" id="next">+</button>
+                    <button class="products__pages-btn" id="prev">-</button>
+                </ul>
+                <div class="dots split">
+                    <div class="dot bg-dark" id="dot1"></div>
+                    <div class="dot bg-darker" id="dot2"></div>
+                    <div class="dot bg-darker" id="dot3"></div>
+                </div>
+            </div>
+            <ul class="products__list">
+                <h3 class="products__list-title">Våre verktøy</h3>
+                <li class="products__list-items">Html</li>
+                <li class="products__list-items">Css</li>
+                <li class="products__list-items">Javascript</li>
+                <li class="products__list-items">Threejs</li>
+                <li class="products__list-items">Blender</li>
+                <li class="products__list-items">Affinity designer</li>
+                <li class="products__list-items">Glsl</li>
+                <li class="products__list-items">React</li>
+            </ul>
+        </section>
+        <section class="contact bg-dark">
+            <div class="contact__links split">
+                <a class="contact__links-link" href="mailto: devjoakimpedersen@gmail.com" type="email">Epost: devjoakimpedersen@gmail.com</a>
+                <a class="contact__links-link" href="tel:+4746940884" type="phone">Tlf: +47-46940884</a>
+                <a class="contact__links-link" href="https://devjoakim.netlify.app/">Personelig portefolio side</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
